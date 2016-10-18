@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="geralMaster.master.cs" Inherits="rpgASP.webForms.geralMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<script src="../Scripts/jquery-1.9.1.min.js"></script>
+<script src="../Scripts/bootstrap.min.js"></script>
+<body>
+    <form id="form1" runat="server">
+        <div style="width: 100%; height: 180px; border: solid 1px black; background-color:silver;">
+            <h1 style="text-align: center; color: darkblue; font-weight:bold; font-size: 62px"> Loja de Jogos Digitais
+            </h1>
+            <asp:Button ID="btnLogout" runat="server" Text="Logout" style="left:95%; top:15%; position: fixed;" OnClick="btnLogout_Click" />
+        </div>
+        <div style="width: 20%; height: 800px; float: left; border: solid 1px black; background-color:whitesmoke">
+            <asp:TreeView ID="TreeView1" runat="server" style="font-size: 32px; color: cadetblue">
+                <Nodes>
+                    <asp:TreeNode NavigateUrl="~/webForms/index.aspx" Text="Home" Value="Home"></asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/webForms/crediar.aspx" Text="Creditar" Value="Creditar"></asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/webForms/loja.aspx" Text="Loja" Value="Loja"></asp:TreeNode>
+                    <asp:TreeNode NavigateUrl="~/webForms/inventario.aspx" Text="Inventario" Value="Inventario"></asp:TreeNode>
+                </Nodes>
+            </asp:TreeView>
+        </div>
+        <div style="width: 80%; height: 800px; float: left; border: solid 1px black; background-color: snow;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
